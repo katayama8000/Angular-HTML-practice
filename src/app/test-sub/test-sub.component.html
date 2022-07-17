@@ -1,3 +1,6 @@
 <p>test-sub works!</p>
-<input type="text">
-<button>click</button>
+
+<button (click)="getObservableData()">getObservableData</button>
+<button (click)="getSubjectData()">getSubjectData</button>
+<div>{{ obData1 }}|{{ obData2 }}</div>
+<div>{{ subData1 }}|{{ subData2 }}</div>
