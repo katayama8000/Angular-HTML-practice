@@ -13,8 +13,10 @@ export class AppComponent {
     'https://cdn.searchenginejournal.com/wp-content/uploads/2022/04/reverse-image-search-627b7e49986b0-sej-760x400.png';
   date!: Date | string;
 
-  myName = '片山';
+  myName = 'katayama';
 
+  linkStyle = 'underline';
+  bcolor = '#F0F';
   test() {
     this.date = '';
   }
