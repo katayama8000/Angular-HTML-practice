@@ -364,6 +364,13 @@
     <li>{{ date | date: "medium" }}</li>
     <li>{{ date | date: "y MM dd (EEE)" }}</li>
   </ul>
+  <div>-------------------- book-component ------------------------</div>
+  <app-book
+    (event)="onReceiveEventFromChild($event)"
+    [dataFromParent]="myName"
+  ></app-book>
+  <button>{{ eventData }}</button>
+  <div>-------------------- book-component ------------------------</div>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -373,9 +380,5 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<app-book
-  (event)="onReceiveEventFromChild($event)"
-  [dataFromParent]="myName"
-></app-book>
-<button>{{ eventData }}</button>
+
 <router-outlet></router-outlet>
