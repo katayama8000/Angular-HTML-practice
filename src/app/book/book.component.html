@@ -1,2 +1,9 @@
 <p>book works!</p>
-<div>{{dataFromParent}}</div>
+<div>{{ dataFromParent }}</div>
+<div>
+  <input
+    type="button"
+    value="今度は親コンポーネントへイベント発火"
+    (click)="onClick()"
+  />
+</div>

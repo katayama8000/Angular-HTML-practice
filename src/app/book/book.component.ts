@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Books } from '../type/book-type';
 
 @Component({
@@ -12,6 +12,13 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() dataFromParent: String = '';
+  @Output() event = new EventEmitter<String>();
+
+  onClick() {
+    this.event.emit(
+      '子コンポーネントから親コンポーネントへデータを渡す際はイベントを経由します。'
+    );
+  }
 
   books: Books[] = [
     {

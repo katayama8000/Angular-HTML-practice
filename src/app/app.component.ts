@@ -27,4 +27,8 @@ export class AppComponent {
     this.date = new Date();
   }
 
+  public eventData: String = '';
+  onReceiveEventFromChild(eventData: String) {
+    this.eventData = eventData;
+  }
 }
