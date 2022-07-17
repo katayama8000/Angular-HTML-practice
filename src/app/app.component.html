@@ -327,8 +327,6 @@
     <a [style.text-decoration]="linkStyle">ssssssssss</a>
     <p style="color: #0ff">○○○○</p>
 
-
-
     <svg
       id="rocket-smoke"
       xmlns="http://www.w3.org/2000/svg"
@@ -352,8 +350,20 @@
   <p>Here are some links to help you get started:</p>
   <div [style.background-color]="bcolor">aaaaa</div>
 
-  <div>{{myName | uppercase}}</div>
+  <div>{{ myName | uppercase }}</div>
 
+  <!-- パイプ -->
+  <div>{{ myName | slice: 3 }}</div>
+  <ul>
+    <li>{{ price | number }}</li>
+    <li>{{ price | number: "5.0-2" }}</li>
+    <li>{{ price | number: "1.0-0" }}</li>
+  </ul>
+  <ul>
+    <li>{{ date | date }}</li>
+    <li>{{ date | date: "medium" }}</li>
+    <li>{{ date | date: "y MM dd (EEE)" }}</li>
+  </ul>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
