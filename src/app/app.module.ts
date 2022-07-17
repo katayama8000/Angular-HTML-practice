@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { BookService } from './book.service';
 import { TesthttpComponent } from './testhttp/testhttp.component';
+import { TestSubComponent } from './test-sub/test-sub.component';
 
 @NgModule({
-  declarations: [AppComponent, BookComponent, TesthttpComponent],
+  declarations: [AppComponent, BookComponent, TesthttpComponent, TestSubComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [BookService],
   bootstrap: [AppComponent],
