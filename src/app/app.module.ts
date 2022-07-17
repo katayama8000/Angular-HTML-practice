@@ -10,9 +10,10 @@ import { BookService } from './book.service';
 import { TesthttpComponent } from './testhttp/testhttp.component';
 import { TestSubComponent } from './test-sub/test-sub.component';
 import { BindingComponent } from './binding/binding.component';
+import { MaskPipe } from './mask.pipe';
 
 @NgModule({
-  declarations: [AppComponent, BookComponent, TesthttpComponent, TestSubComponent, BindingComponent],
+  declarations: [AppComponent, BookComponent, TesthttpComponent, TestSubComponent, BindingComponent, MaskPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [BookService],
   bootstrap: [AppComponent],
