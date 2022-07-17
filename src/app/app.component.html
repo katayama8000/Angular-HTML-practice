@@ -1,11 +1,4 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
 
 <style>
   :host {
@@ -364,21 +357,19 @@
     <li>{{ date | date: "medium" }}</li>
     <li>{{ date | date: "y MM dd (EEE)" }}</li>
   </ul>
-  <div>-------------------- book-component ------------------------</div>
+  <div>-------------------- book-component start ------------------------</div>
   <app-book
     (event)="onReceiveEventFromChild($event)"
     [dataFromParent]="myName"
   ></app-book>
   <button>{{ eventData }}</button>
-  <div>-------------------- book-component ------------------------</div>
+  <div>-------------------- book-component end ------------------------</div>
+  <br><br>
+  <div>-------------------------- http start -----------------------------</div>
+  <app-testhttp></app-testhttp>
+  <div>-------------------------- http end -----------------------------</div>
+
 </div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Books } from './type/book-type';
+import { Book } from './type/book-type';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class BookService {
   constructor() {}
 
-  getBooks(): Books {
+  getBooks(): Book {
     return {
       isbn: '978-4-7741-8411-1',
       title: '苦役列車',

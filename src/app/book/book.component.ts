@@ -1,6 +1,6 @@
 import { BookService } from './../book.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Books } from '../type/book-type';
+import { Book } from '../type/book-type';
 
 @Component({
   selector: 'app-book',
@@ -8,13 +8,11 @@ import { Books } from '../type/book-type';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
-  constructor(private BookService:BookService) {}
+  constructor(private BookService: BookService) {}
 
   ngOnInit(): void {
-    this.books.push(this.BookService.getBooks())
+    this.books.push(this.BookService.getBooks());
   }
-
-
 
   @Input() dataFromParent: String = '';
   @Output() event = new EventEmitter<String>();
@@ -25,7 +23,7 @@ export class BookComponent implements OnInit {
     );
   }
 
-  books: Books[] = [
+  books: Book[] = [
     {
       isbn: '978-4-7741-8411-1',
       title: 'サイコロを投げる',
