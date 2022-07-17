@@ -10,8 +10,14 @@ export class BindingComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  fontColor = 'green';
-  onClick(color: string) {
+  fontColor: string = 'green';
+  bgColor: string = 'yellow';
+
+  onClick1(color: string) {
     this.fontColor = color;
+  }
+
+  onClick2(color: string) {
+    this.bgColor = color;
   }
 }

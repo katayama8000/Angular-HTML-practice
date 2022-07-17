@@ -1,10 +1,20 @@
 <p>binding works!</p>
 <h1><span [style.color]="fontColor">color</span></h1>
 <div>
-  <button (click)="onClick('red')">Red</button>
-  <button (click)="onClick('blue')">Blue</button>
+  <button (click)="onClick1('red')">Red</button>
+  <button (click)="onClick1('lightblue')">lightblue</button>
 </div>
 
-<h1><span style="color: white;" [style.background-color]="fontColor">bg-color</span></h1>
+<div>
+  <button (click)="onClick2('teal')">teal</button>
+  <button (click)="onClick2('silver')">silver</button>
+</div>
 
-
+<h1>
+  <span
+    style="color: white"
+    [style.color]="fontColor"
+    [style.background-color]="bgColor"
+    >bg-color</span
+  >
+</h1>
