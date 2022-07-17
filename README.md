@@ -1,8 +1,10 @@
 # Angular-Practice
 
 - メソッド
-- 片方向バインディング
-  -  []
+- {{}} ※この中には「?.」「|」しか書けない
+- プロパティバインディング
+  - []
+  - cssの切り替え
 - 双方向バインディング
   - [()]
 - パイプ --- template利用できるAngularの構文
@@ -23,6 +25,9 @@
   - subject
     - Observableを継承したクラス --- 任意のタイミングでデータを流したいときに使う
   - operator
+    - map
+    - filter
+    - take
     
 ## Angular-CLI
 - ng new [プロジェクト名]
