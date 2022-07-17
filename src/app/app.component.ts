@@ -17,6 +17,8 @@ export class AppComponent {
 
   linkStyle = 'underline';
   bcolor = '#F0F';
+  price: number = 2356.357;
+
   test() {
     this.date = '';
   }
@@ -24,4 +26,5 @@ export class AppComponent {
   show() {
     this.date = new Date();
   }
+
 }
