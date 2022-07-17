@@ -33,3 +33,4 @@
 - ng new [プロジェクト名]
 - ng g component [コンポーネント名]
 - ng g service [サービス名]
+- ng g pipe --name=[pipe名]
