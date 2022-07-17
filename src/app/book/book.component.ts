@@ -1,3 +1,4 @@
+import { BookService } from './../book.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Books } from '../type/book-type';
 
@@ -7,9 +8,13 @@ import { Books } from '../type/book-type';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
-  constructor() {}
+  constructor(private BookService:BookService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.BookService.getBooks()
+  }
+
+
 
   @Input() dataFromParent: String = '';
   @Output() event = new EventEmitter<String>();
