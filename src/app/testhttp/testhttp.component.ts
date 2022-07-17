@@ -1,7 +1,7 @@
 import { TesthttpService } from './../testhttp.service';
 import { Component, OnInit } from '@angular/core';
 import { member } from '../type/member-type';
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -12,7 +12,11 @@ import { filter } from 'rxjs/operators';
 export class TesthttpComponent implements OnInit {
   constructor(private TesthttpService: TesthttpService) {}
 
-  ngOnInit(): void {}
+  member$!: Observable<member>;
+
+  ngOnInit(): void {
+    this.testasync();
+  }
 
   member: member[] = [];
 
@@ -30,7 +34,15 @@ export class TesthttpComponent implements OnInit {
   ]);
 
   example = this.source.pipe(filter((person) => person.age >= 30));
-  subscribe = this.example.subscribe((val) => console.log(`Over 30: ${val.name}`));
+  subscribe = this.example.subscribe(
+    (val) => console.log(`Over 30: ${val.name}`),
+    (err) => console.log(err),
+    () => console.log('complete')
+  );
+
+  testasync(): void{
+    this.member$ = this.TesthttpService.getJson()
+  }
 
   getjsonplaceholder() {
     this.TesthttpService.getJson().subscribe((data: member) => {
