@@ -24,6 +24,7 @@
 - RxJs
   - subject
     - Observableを継承したクラス --- 任意のタイミングでデータを流したいときに使う
+    - next subjectのメソッド --- 実行されたらsubscribeにデータを流せる
   - operator
     - map
     - filter
