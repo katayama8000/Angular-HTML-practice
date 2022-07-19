@@ -11,7 +11,7 @@
   - async pipe --- templateの中で自動で処理される --- subscribeをしなくてもよい
 - コンポーネント --- Vue,Reactと同じ
 - 親から子にデータを受け渡し
-- 子からおやにデータを受け渡し
+- 子から親にデータを受け渡し
 - service --- メソッドを切り分けるもの
 - http通信 --- APIをたたく
 - Observable
