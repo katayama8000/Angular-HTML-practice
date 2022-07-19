@@ -30,6 +30,9 @@
     - filter
     - take
     
+## need to learn
+- factory
+    
 ## Angular-CLI
 - ng new [プロジェクト名]
 - ng g component [コンポーネント名]
