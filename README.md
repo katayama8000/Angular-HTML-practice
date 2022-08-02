@@ -11,7 +11,7 @@
   - async pipe --- templateの中で自動で処理される --- subscribeをしなくてもよい
 - コンポーネント --- Vue,Reactと同じ
 - 親から子にデータを受け渡し
-- 子からおやにデータを受け渡し
+- 子から親にデータを受け渡し
 - service --- メソッドを切り分けるもの
 - http通信 --- APIをたたく
 - Observable
@@ -24,13 +24,18 @@
 - RxJs
   - subject
     - Observableを継承したクラス --- 任意のタイミングでデータを流したいときに使う
+    - next subjectのメソッド --- 実行されたらsubscribeにデータを流せる
   - operator
     - map
     - filter
     - take
     
+## need to learn
+- factory
+    
 ## Angular-CLI
 - ng new [プロジェクト名]
 - ng g component [コンポーネント名]
 - ng g service [サービス名]
+- ng g m [モジュール名]
 - ng g pipe --name=[pipe名]
