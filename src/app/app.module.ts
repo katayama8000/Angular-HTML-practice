@@ -12,10 +12,30 @@ import { TestSubComponent } from './test-sub/test-sub.component';
 import { BindingComponent } from './binding/binding.component';
 import { MaskPipe } from './mask.pipe';
 import { TestcombineComponent } from './testcombine/testcombine.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  declarations: [AppComponent, BookComponent, TesthttpComponent, TestSubComponent, BindingComponent, MaskPipe, TestcombineComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    BookComponent,
+    TesthttpComponent,
+    TestSubComponent,
+    BindingComponent,
+    MaskPipe,
+    TestcombineComponent,
+    RxjsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+  ],
   providers: [BookService],
   bootstrap: [AppComponent],
 })

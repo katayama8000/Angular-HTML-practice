@@ -1,7 +1,7 @@
-import { map } from 'rxjs/operators';
+import { map, take, filter } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { observable, Observable, Subject } from 'rxjs';
+import { observable, Observable, Subject, combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-test-sub',
@@ -11,10 +11,10 @@ import { observable, Observable, Subject } from 'rxjs';
 export class TestSubComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
-  obData1 = '';
-  subData1 = '';
-  obData2 = '';
-  subData2 = '';
+  obData1 = 0;
+  subData1 = 0;
+  obData2 = 0;
+  subData2 = 0;
 
   ngOnInit(): void { }
 
@@ -25,8 +25,15 @@ export class TestSubComponent implements OnInit {
   getObservableData() {
     let tmpdata = new Observable<any>((observable) => {
       observable.next(Math.floor(Math.random() * 100) + 1);
+      observable.next(Math.floor(Math.random() * 100) + 1);
+      observable.next(Math.floor(Math.random() * 100) + 1);
+      observable.next(Math.floor(Math.random() * 100) + 1);
     });
-    tmpdata.subscribe((data) => {
+    tmpdata.pipe(
+      map((data) => data * 10),
+      take(3),
+      filter((data: number) => data < 50)
+    ).subscribe((data) => {
       this.obData1 = data;
     });
     tmpdata.subscribe((data) => {
@@ -39,7 +46,9 @@ export class TestSubComponent implements OnInit {
     tmpdata.subscribe((data) => {
       this.subData1 = data;
     });
-    tmpdata.subscribe((data) => {
+    tmpdata.pipe(
+      map((data:number) => data * 10),
+    ).subscribe((data) => {
       this.subData2 = data;
     });
     tmpdata.next(Math.floor(Math.random() * 100) + 1);

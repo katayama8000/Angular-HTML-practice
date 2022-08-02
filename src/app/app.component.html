@@ -1,5 +1,3 @@
-
-
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -358,6 +356,9 @@
     <li>{{ date | date: "y MM dd (EEE)" }}</li>
     <h1>{{ cardNumber | mask }}</h1>
   </ul>
+  <div>-----------------------rxjs ---------------------</div>
+  <app-rxjs></app-rxjs>
+  <div>-----------------------rxjs ---------------------</div>
   <div>-----------------------combine ---------------------</div>
   <app-testcombine></app-testcombine>
   <div>-----------------------combine ---------------------</div>
@@ -368,18 +369,45 @@
   ></app-book>
   <button>{{ eventData }}</button>
   <div>-------------------- book-component end ------------------------</div>
-  <br><br>
-  <div>----------------------------------- binding start ------------------------------------</div>
+  <br /><br />
+  <div>
+    ----------------------------------- binding start
+    ------------------------------------
+  </div>
   <app-binding></app-binding>
-  <div>----------------------------------- binding end ----------------------------------------</div>
-  <div>----------------------------------- sub start ------------------------------------</div>
+  <div>
+    ----------------------------------- binding end
+    ----------------------------------------
+  </div>
+  <div>
+    ----------------------------------- sub start
+    ------------------------------------
+  </div>
   <app-test-sub></app-test-sub>
-  <div>----------------------------------- sub end ----------------------------------------</div>
+  <div>
+    ----------------------------------- sub end
+    ----------------------------------------
+  </div>
   <div>-------------------------- http start -----------------------------</div>
   <app-testhttp></app-testhttp>
   <div>-------------------------- http end -----------------------------</div>
 
+  <h1>・データバインディング</h1>
+  <div>コンポーネント→テンプレート</div>
+  <span>プロパティバインディング</span>
+  <button type="button" [disabled]="isDisabled">hello</button>
+  <span>クラスバインディング</span>
+  <div [class.bold]="bold">color</div>
+  <span>スタイルバインディング</span>
+  <div>コンポーネント←テンプレート</div>
+  <span>イベントバインディング</span>
+  <div>コンポーネント←→テンプレート</div>
+  <span>双方向バインディング</span>
 </div>
 
+<mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input matInput />
+</mat-form-field>
 
 <router-outlet></router-outlet>

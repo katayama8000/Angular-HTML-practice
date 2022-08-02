@@ -32,4 +32,8 @@ export class AppComponent {
   onReceiveEventFromChild(eventData: String) {
     this.eventData = eventData;
   }
+
+  public isDisabled: boolean = true;
+
+  public bold = true;
 }

@@ -48,11 +48,16 @@ export class TesthttpComponent implements OnInit {
   }
 
   testmap() {
-    this.TesthttpService.getJson()
-      .pipe(map((data: member) => 'map' + data.title))
-      .subscribe((data: string) => {
-        this.title = data;
-      });
+    const tmp: Observable<member> = this.TesthttpService.getJson();
+    const obs = new Observable();
+
+    console.log('tttttttttttttttttttttest', tmp);
+    console.log('wwwwwwwwwwwwwwwwwtttttest', obs);
+
+    // .pipe(map((data: member) => 'map' + data.title))
+    // .subscribe((data: string) => {
+    //   this.title = data;
+    // });
   }
 
   getjsonplaceholder() {
@@ -83,12 +88,10 @@ export class TesthttpComponent implements OnInit {
       this.TesthttpService.getArrayJson()
         .pipe(take(3))
         .subscribe((data: member[]) => {
-           console.log(`take(${++this.count})`);
+          console.log(`take(${++this.count})`);
         });
     }
   }
-
-
 
   numberOne$ = of(1);
 }
