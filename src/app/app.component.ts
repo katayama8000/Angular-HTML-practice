@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,10 @@ export class AppComponent {
   linkStyle = 'underline';
   bcolor = '#F0F';
   price: number = 2356.357;
+
+  constructor(private router: Router) {
+    console.log(this.router.url);
+  }
 
   test() {
     this.date = '';

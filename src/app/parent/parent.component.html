@@ -1,0 +1,6 @@
+<hr />
+<p>parent works!</p>
+<app-child
+  [dataFromParent]="parentData"
+  (action)="onRecieveEventFromChild($event)"
+></app-child>

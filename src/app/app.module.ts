@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+
 import { BookComponent } from './book/book.component';
 import { BookService } from './book.service';
 import { TesthttpComponent } from './testhttp/testhttp.component';
@@ -13,6 +15,9 @@ import { BindingComponent } from './binding/binding.component';
 import { MaskPipe } from './mask.pipe';
 import { TestcombineComponent } from './testcombine/testcombine.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './component/child/child.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module';
@@ -27,6 +32,8 @@ import { MaterialModule } from './material/material.module';
     MaskPipe,
     TestcombineComponent,
     RxjsComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,15 +11,15 @@ export class TesthttpService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
-  constructor(
-    private http: HttpClient,
-  ) { }
+  constructor(private http: HttpClient) {}
 
   getJson(): Observable<member> {
-    return this.http.get<member>('https://jsonplaceholder.typicode.com/todos/1').pipe(
-      tap((data) => console.log(data)),
-      catchError(throwError)
-    );
+    return this.http
+      .get<member>('https://jsonplaceholder.typicode.com/todos/1')
+      .pipe(
+        tap((data) => console.log(data)),
+        catchError(throwError)
+      );
   }
 
   getArrayJson(): Observable<member[]> {
@@ -27,9 +27,8 @@ export class TesthttpService {
       .get<member[]>('https://jsonplaceholder.typicode.com/posts')
       .pipe(
         filter((data: member[]) => data.length > 0),
-        tap((data) => console.log("alllllllllll")),
+        tap((data) => console.log(data)),
         catchError(throwError)
       );
   }
-
 }
