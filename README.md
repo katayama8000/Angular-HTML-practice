@@ -37,8 +37,19 @@
 - factory
     
 ## Angular-CLI
-- ng new [プロジェクト名]
-- ng g component [コンポーネント名]
-- ng g service [サービス名]
-- ng g m [モジュール名]
-- ng g pipe --name=[pipe名]
+
+```
+ng new [プロジェクト名]
+```
+```
+ng g component [コンポーネント名]
+```
+```
+ng g service [サービス名]
+```
+```
+ng g m [モジュール名]
+```
+```
+ng g pipe --name=[pipe名]
+```
