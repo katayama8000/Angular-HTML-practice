@@ -35,6 +35,26 @@
     
 ## need to learn
 - factory
+
+## EVENT
+イベント|概要
+---|---|
+click|クリック時
+dblclick|ダブルクリック時
+mousedown|マウスボタンを押した時
+mouseup|マウスボタンを離した時
+mouseenter|マウスポインターが要素に入った時
+mousemove|マウスポインターが要素内を移動した時
+mouseleave|マウスポインターが要素から離れる時
+keydown|キーを押した時
+keypress|キーを押し続けている時
+focus|要素にフォーカスが当たった時
+blur|要素からフォーカスが外れた時
+input|入力値が変更された時
+select|テキストが選択された時
+keyup|キーを離した時
+reset|リセット時
+submit|サブミット時
     
 ## Angular-CLI
 
