@@ -18,11 +18,7 @@ export class TesthttpComponent implements OnInit {
   member: member[] = [];
   subject = new Subject();
 
-  ngOnInit(): void {
-    this.testasync();
-    this.testmap();
-    this.getjsonplaceholderarray();
-  }
+  ngOnInit(): void {}
 
   source = from([
     { name: 'sdfhd', age: 31 },
@@ -51,9 +47,6 @@ export class TesthttpComponent implements OnInit {
     const tmp: Observable<member> = this.TesthttpService.getJson();
     const obs = new Observable();
 
-    console.log('tttttttttttttttttttttest', tmp);
-    console.log('wwwwwwwwwwwwwwwwwtttttest', obs);
-
     // .pipe(map((data: member) => 'map' + data.title))
     // .subscribe((data: string) => {
     //   this.title = data;
@@ -77,8 +70,6 @@ export class TesthttpComponent implements OnInit {
         })
       )
       .subscribe();
-
-    //console.log(data);
   }
 
   count = 0;

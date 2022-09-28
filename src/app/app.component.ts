@@ -15,7 +15,7 @@ export class AppComponent {
   date!: Date | string;
   cardNumber: string = '1111-1111-1111-1111';
 
-  myName = 'katayama';
+  myName = 'katayama8000';
 
   linkStyle = 'underline';
   bcolor = '#F0F';
