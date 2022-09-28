@@ -15,10 +15,10 @@ export class BookComponent implements OnInit {
   }
 
   @Input() dataFromParent: String = '';
-  @Output() event = new EventEmitter<String>();
+  @Output() action = new EventEmitter<String>();
 
   onClick() {
-    this.event.emit(
+    this.action.emit(
       '子コンポーネントから親コンポーネントへデータを渡す際はイベントを経由します。'
     );
   }

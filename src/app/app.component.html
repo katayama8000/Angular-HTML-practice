@@ -356,41 +356,17 @@
     <li>{{ date | date: "y MM dd (EEE)" }}</li>
     <h1>{{ cardNumber | mask }}</h1>
   </ul>
-  <div>-----------------------rxjs ---------------------</div>
   <app-rxjs></app-rxjs>
-  <div>-----------------------rxjs ---------------------</div>
-  <div>-----------------------combine ---------------------</div>
   <app-testcombine></app-testcombine>
-  <div>-----------------------combine ---------------------</div>
-  <div>-------------------- book-component start ------------------------</div>
   <app-book
-    (event)="onReceiveEventFromChild($event)"
+    (action)="onReceiveEventFromChild($event)"
     [dataFromParent]="myName"
   ></app-book>
   <button>{{ eventData }}</button>
-  <div>-------------------- book-component end ------------------------</div>
   <br /><br />
-  <div>
-    ----------------------------------- binding start
-    ------------------------------------
-  </div>
   <app-binding></app-binding>
-  <div>
-    ----------------------------------- binding end
-    ----------------------------------------
-  </div>
-  <div>
-    ----------------------------------- sub start
-    ------------------------------------
-  </div>
   <app-test-sub></app-test-sub>
-  <div>
-    ----------------------------------- sub end
-    ----------------------------------------
-  </div>
-  <div>-------------------------- http start -----------------------------</div>
   <app-testhttp></app-testhttp>
-  <div>-------------------------- http end -----------------------------</div>
 
   <h1>・データバインディング</h1>
   <div>コンポーネント→テンプレート</div>

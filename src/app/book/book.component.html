@@ -1,4 +1,10 @@
 <p>book works!</p>
+<div *ngFor="let b of books">
+  <div>{{ b.title }}</div>
+  <div>{{ b.publisher }}</div>
+  <div>{{ b.price }}</div>
+  <div>{{ b.isbn }}</div>
+</div>
 <div>{{ dataFromParent }}</div>
 <div>
   <input
@@ -7,12 +13,3 @@
     (click)="onClick()"
   />
 </div>
-
-<div>------------------------- ngFor -------------------------<div>
-<div *ngFor="let b of books">
-  <div>{{ b.title }}</div>
-  <div>{{ b.publisher }}</div>
-  <div>{{ b.price }}</div>
-  <div>{{ b.isbn }}</div>
-</div>
-<div>------------------------- ngFor -------------------------<div></div>
