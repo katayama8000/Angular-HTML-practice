@@ -21,6 +21,7 @@ import { ChildComponent } from './component/child/child.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module';
+import { HTMLComponent } from './HTML/html-practice/html.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MaterialModule } from './material/material.module';
     RxjsComponent,
     ParentComponent,
     ChildComponent,
+    HTMLComponent,
   ],
   imports: [
     BrowserModule,
